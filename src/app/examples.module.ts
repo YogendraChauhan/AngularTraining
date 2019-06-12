@@ -7,6 +7,7 @@ import { ExamplesComponent } from './examples.component';
 import { PageNotFoundComponent } from './examples/page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ServiceComponent } from './examples/service/service.component';
+import { DataService } from './services/data.service';
 
 @NgModule({
   declarations: [ExamplesComponent, PageNotFoundComponent, ServiceComponent],
@@ -16,6 +17,7 @@ import { ServiceComponent } from './examples/service/service.component';
     HttpClientModule,
     ExamplesRoutingModule
   ],
+  providers: [DataService],
   bootstrap: [ExamplesComponent]
 })
 export class ExamplesModule { }

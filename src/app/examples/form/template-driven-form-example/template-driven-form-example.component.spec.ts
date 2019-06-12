@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TemplateDrivenFormExampleComponent } from './template-driven-form-example.component';
+import { FormsModule } from '@angular/forms';
+import { CustomInputComponent } from '../../../components/custom-input/custom-input.component';
 
 describe('TemplateDrivenFormExampleComponent', () => {
   let component: TemplateDrivenFormExampleComponent;
@@ -8,7 +10,8 @@ describe('TemplateDrivenFormExampleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TemplateDrivenFormExampleComponent ]
+      declarations: [ TemplateDrivenFormExampleComponent, CustomInputComponent],
+      imports: [FormsModule]
     })
     .compileComponents();
   }));
